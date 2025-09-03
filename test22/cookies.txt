@@ -1,5 +1,0 @@
-# HTTrack Website Copier Cookie File
-# This file format is compatible with Netscape cookies
-.komchadluek.net	TRUE	/	FALSE	1999999999	_cfuvid	5qxvBvU1sMOrhsHG8PRzeb9tucSq6G0hnbcwuMRO.10-1756876776415-0.0.1.1-604800000
-www.komchadluek.net	TRUE	/	FALSE	1999999999	SameSite	None
-
