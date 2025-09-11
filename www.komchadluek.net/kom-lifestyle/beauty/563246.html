@@ -6,6 +6,11 @@
     content="text/html;charset=utf-8"
   /><!-- /Added by HTTrack -->
   <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit&family=Noto+Sans+Thai&family=Prompt&display=swap"
+      rel="stylesheet"
+    />
+
     <meta charset="utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
@@ -4129,11 +4134,15 @@
                       background-clip: text; /* 일부 브라우저 */
                       color: transparent; /* fallback */
                     }
+                    .inimg-wrap .t {
+                      font-family: 'Kanit' !important;
+                    }
                     .inimg-wrap .font-p {
                       font-weight: 800;
                       font-size: 20px;
                       color: #ed1c91;
                     }
+
                     .inimg-wrap .ad-cta {
                       background: #fff;
                       color: #333;
@@ -4557,13 +4566,17 @@
                           ? `<div class="ad-text">${escapeHtml(
                               qs.get('hoverWord1') || 'สกินแคร์ตัวท๊อป'
                             )}</div>`
-                          : `<div class="ad-text">${escapeHtml(
+                          : `<div class="ad-text t">${escapeHtml(
                               qs.get('hoverWord1') || 'สกินแคร์ตัวท๊อป'
                             )} </div>`;
 
                         center.classList.add('hover-content');
                         center.innerHTML = `
-${smallLogo ? `<img src="${escapeHtml(smallLogo)}" alt="" style="width:125px; margin:0px" />` : ''}
+${
+  smallLogo
+    ? `<img src="${escapeHtml(smallLogo)}" alt="" style="width:125px; margin: 0 0 10px 0" />`
+    : ''
+}
 ${firstLine}
 <div class="ad-text p">${escapeHtml(qs.get('hoverLineBottom') || 'Shop now')}</div>
 `;
