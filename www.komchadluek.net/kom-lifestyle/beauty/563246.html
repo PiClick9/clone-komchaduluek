@@ -4108,7 +4108,26 @@
                     .inimg-wrap .ad-text {
                       font-weight: 800;
                       font-size: 18px;
-                      color: #004385;
+
+                      /* 🔹 블루 → 보라 → 핑크 그라데이션 */
+                      background: linear-gradient(
+                        90deg,
+                        #004385,
+                        /* 블루 */ #7b2cbf,
+                        /* 보라 */ #ff69b4 /* 핑크 */
+                      );
+
+                      -webkit-background-clip: text;
+                      -webkit-text-fill-color: transparent;
+                      background-clip: text; /* 일부 브라우저 */
+                      color: transparent; /* fallback */
+                    }
+                    .inimg-wrap .p {
+                      background: #ff69b4;
+                      -webkit-background-clip: text;
+                      -webkit-text-fill-color: transparent;
+                      background-clip: text; /* 일부 브라우저 */
+                      color: transparent; /* fallback */
                     }
                     .inimg-wrap .font-p {
                       font-weight: 800;
@@ -4544,9 +4563,9 @@
 
                         center.classList.add('hover-content');
                         center.innerHTML = `
-${smallLogo ? `<img src="${escapeHtml(smallLogo)}" alt="" style="width:80px; margin:0px" />` : ''}
+${smallLogo ? `<img src="${escapeHtml(smallLogo)}" alt="" style="width:125px; margin:0px" />` : ''}
 ${firstLine}
-<div class="ad-text">${escapeHtml(qs.get('hoverLineBottom') || 'Shop now')}</div>
+<div class="ad-text p">${escapeHtml(qs.get('hoverLineBottom') || 'Shop now')}</div>
 `;
                         requestAnimationFrame(() => center.classList.add('show'));
 
